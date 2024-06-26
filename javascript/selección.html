@@ -1,0 +1,46 @@
+<h1>INTRODUCE LA RESPUESTA, Y CLICK LA RESPUESTA QUE CREAS CORRECTA</h1>
+<body>
+<table border="1" width="30%">
+<tr>
+		<td width="30%" id="h1" onclick="caca(this.id, this.innerHTML);">gaga</td>
+		<td width="30%" id="h2" onclick="caca(this.id, this.innerHTML);">gege</td>
+		<td width="30%" id="h3" onclick="caca(this.id, this.innerHTML);">gigi</td>
+</tr>
+<tr>
+		<td width="30%" id="h4" onclick="caca(this.id, this.innerHTML);">gogo</td>
+		<td width="30%" id="h5" onclick="caca(this.id, this.innerHTML);">gugu</td>
+		<td width="30%" id="h6" onclick="caca(this.id, this.innerHTML);">fafa</td>
+</tr>
+<tr>
+		<td width="30%" id="h7"	onclick="caca(this.id, this.innerHTML);">fefe</td>
+		<td width="30%" id="h8"	onclick="caca(this.id, this.innerHTML);">fifi</td>
+		<td width="30%" id="h9"	onclick="caca(this.id, this.innerHTML);">fofo</td>
+</tr>
+</table>
+<table border="1" width="10%" align="left">
+	<tr> 
+		<td width="50%"><input type="text" id="resu"></td>
+	</tr>
+</table>
+<script language="javascript">
+		var luz = false;
+	function caca(valor, value){
+		var miao = document.getElementById(valor);
+		var fiao = document.getElementById("resu").value;
+
+		if(luz){
+			miao.style.backgroundColor = "";
+			luz = false;
+		}else{
+			miao.style.backgroundColor = "red";
+			luz = true;
+			if(value == fiao){
+				miao.innerHTML = "";
+			}
+		}
+
+			
+	}
+
+</script>
+</body>

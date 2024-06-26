@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<label id="haha">milagroso</label>
+	<input type="text" id="hehe">
+	<input type="button" value="send" onclick="caca();">
+	<script language="javascript">
+		arr1 = new Array("gaga","gege","gigi","gogo","gugu");
+		arr2 = new Array("fafa","fefe","fifi","fofo","fufu");
+
+			var num = 0;
+	function caca(){
+		if(num<arr1.length){
+			var gaga = document.getElementById("haha");
+			var gege = document.getElementById("hehe");
+			if(gege.value==arr2[num]){
+				gaga.innerHTML = arr1[num+1];
+				gege.value = "";
+
+			}
+			num = num+1;			
+		}
+
+	}
+
+
+
+	
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<h1>CLICK LA 1º COLUMNA, Y LUEGO LA 2º COLUMNA, Y CLICK BUTTON PARA VER SI DESAPARECEN</h1>
+<body>
+<table border="1" width="10%" style="position:absolute; left: 20px;">
+		<tr>
+				<td width="30%" id="h1" onclick="caca(this.id, this.innerHTML);">gaga</td>
+		</tr>
+		<tr>
+				<td width="30%" id="h2" onclick="caca(this.id, this.innerHTML);">gege</td>
+		</tr>
+		<tr>
+				<td width="30%" id="h3" onclick="caca(this.id, this.innerHTML);">gigi</td>
+		</tr>
+		<tr>
+				<td width="30%" id="h4" onclick="caca(this.id, this.innerHTML);">gogo</td>
+		</tr>
+		<tr>
+				<td width="30%" id="h5" onclick="caca(this.id, this.innerHTML);">gugu</td>
+		</tr>
+		<tr>
+				<td width="30%" id="h6" onclick="caca(this.id, this.innerHTML);">fafa</td>
+		</tr>
+</table>
+<table border="1" width="10%" style="position:absolute; left: 160px;">
+		<tr>
+				<td width="30%" id="g1" onclick="cece(this.id, this.innerHTML);">gaga</td>
+		</tr>
+		<tr>
+				<td width="30%" id="g2" onclick="cece(this.id, this.innerHTML);">gege</td>
+		</tr>
+		<tr>
+				<td width="30%" id="g3" onclick="cece(this.id, this.innerHTML);">gigi</td>
+		</tr>
+		<tr>
+				<td width="30%" id="g4" onclick="cece(this.id, this.innerHTML);">gogo</td>
+		</tr>
+		<tr>
+				<td width="30%" id="g5" onclick="cece(this.id, this.innerHTML);">gugu</td>
+		</tr>
+		<tr>
+				<td width="30%" id="g6" onclick="cece(this.id, this.innerHTML);">fafa</td>
+		</tr>
+</table>
+			<label id="p1" style="position:absolute; top: 250px; visibility: hidden;"></label>
+			<label id="p2" style="position:absolute; top: 280px; visibility: hidden;"></label>
+			<label id="q1" style="position:absolute; top: 310px; visibility: hidden;"></label>
+			<label id="q2" style="position:absolute; top: 340px; visibility: hidden;"></label>
+<input type="button" id="bu" value="Send" style="position:absolute; left: 250px;" onclick="demo();">
+<script language="javascript">
+
+	var luz = false;
+	// BOOLEAN
+	function caca(valor, va){
+		//THIS.ID, THIS.INNERHTML = VALOR, VA
+		var miao = document.getElementById(valor);
+
+		if(luz){
+			miao.style.backgroundColor = "";
+			luz = false;
+		}else{
+			miao.style.backgroundColor = "red";
+			luz = true;
+			// INTRODUCIR LOS VALORES OBTENIDOS EN LABEL
+			document.getElementById("p1").innerHTML = valor;
+			document.getElementById("p2").innerHTML = va;
+		}
+			
+	}
+	var lu = false;
+	function cece(walor, walue){
+		var mimi = document.getElementById(walor);
+
+		if(lu){
+			mimi.style.backgroundColor = "";
+			lu = false;
+		}else{
+			mimi.style.backgroundColor = "red";
+			lu = true;
+			document.getElementById("q1").innerHTML = walor;
+			document.getElementById("q2").innerHTML = walue;
+		}	
+	}
+
+	function demo(){
+		var rara = document.getElementsByTagName("label");
+		//OBTENER LA CANTIDAD DE LABEL EXISTENTE
+		if(rara[1].innerHTML==rara[3].innerHTML){
+			//SI EL CONTENIDO DE LABEL1 = LABEL3
+			document.getElementById(rara[0].innerHTML).innerHTML = "";
+			//BUSQUE EL ID INDICADO EN LABEL0, DE ETIQUETA "TD", Y CÁMBIALO POR NADA
+			document.getElementById(rara[2].innerHTML).innerHTML = "";
+		}else{
+			alert("incorrecto");
+		}
+	}
+
+
+</script>
+</body>
