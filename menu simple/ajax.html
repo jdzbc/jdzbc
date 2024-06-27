@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<script src="data/datas.js"></script>
+		<script src="hexin.js"></script>
+
+		<script>
+
+	//1º obtener array
+	var carre = [];
+	var carri = [];
+				for(i=0; i < questions.length; i++){
+					carre.push(questions[i].c);
+					carri.push(questions[i].t);
+				}
+	
+	//2º obtener array
+	carro = new Array();
+	carru = new Array();
+	
+	for(x=0;x<carre.length;x++){
+			carro[x] = matriz(carre, carri, x, 0);
+			carru[x] = matriz(carre, carri, x, 1);
+	
+	}
+	//alert(carro);
+	//alert(carru);
+	//llamar initia(), menu() a la vez, uno es la cabecera, y el otro para añadir ramas
+	var ejemplo = initia();
+	for(z=0; z<carre.length;z++){
+		menu(carro[z],carru[z]);
+	}
+	//alert(document.body.innerHTML);
+
+		</script>
+	</body>
+</html>
